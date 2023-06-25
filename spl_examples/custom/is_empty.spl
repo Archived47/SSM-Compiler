@@ -1,0 +1,20 @@
+//var x = 1 : 2 : 3 : [];
+//var y = 4 : 5 : 6 : [];
+//var z = x : y : [];
+[Int] em = 1 : 2 : 3 : 4 : [];
+
+main () {
+    //x = x.hd : x;
+    //print(z);
+    em = em.tl;
+    em.hd = 5;
+    print(em);
+    em = em.tl;
+    print(em);
+    em = em.tl;
+    print(em);
+    em.hd = 5;
+    em = em.tl;
+    print(em);
+    print(isEmpty(em));
+}

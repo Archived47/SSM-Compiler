@@ -1,0 +1,15 @@
+lx:		bra		lz
+ly:
+l1:		halt
+lz: 	ldc 	3
+		ldc 	4
+		ldc		-4
+		ldc 	0x5
+		ldc 	-0x6
+		ldc 	ly
+		annote SP -3 0 red "Pushed constants"
+		add
+		mul
+		sub
+		trap	0
+		bra l1

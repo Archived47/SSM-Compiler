@@ -1,0 +1,24 @@
+var x = y;
+var y = 10;
+
+func(x, y) {
+	var z = x + y;
+	var y = x + y;
+	x = 5;
+	var gg = x + y;
+
+	if (x > y) {
+		z = x + y;
+		y = x + y;
+		x = 5;
+	} else {
+		z = x + y;
+		y = x + y;
+		x = 5;
+	}
+
+	return y;
+}
+
+var z = 10;
+

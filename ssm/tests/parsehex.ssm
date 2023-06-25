@@ -1,0 +1,12 @@
+ldc 0x1a
+ldc 26
+eq
+ldc 0x10
+ldc 16
+eq
+and
+ldc 0x1A
+ldc 26
+eq
+and
+halt

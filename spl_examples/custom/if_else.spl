@@ -1,0 +1,11 @@
+main() {
+    if(True) {
+        print(1);
+    } else {
+        if(False) {
+            print(2);
+        } else {
+            print(3);
+        }
+    }
+}

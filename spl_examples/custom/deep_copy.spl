@@ -1,0 +1,72 @@
+/*
+/* Copy a basic type */
+var x = 2 : 3 : 4 : 5 : [];
+var y = 1 : x;
+*/
+
+/*
+/* Copy a complex list type */
+var p1 = (1,2);
+var p2 = (3,4);
+var p3 = (5,6);
+var x = p2 : p3 : [];
+var y = p1 : x;
+*/
+
+/*
+/* Copy a a list of lists */
+var l1 = 1 : 2 : 3 : [];
+var l2 = 4 : 5 : 6 : [];
+var l12 = l1 : l2 : [];
+var l3 = 7 : 8 : 9 : [];
+var l4 = 10 : 11 : 12 : [];
+var l34 = l3 : l4 : [];
+var y = l12 : l34 : [];
+*/
+
+
+/*
+/* Copy a pair */
+var x = (1,2);
+var z = x;
+var y = z;
+*/
+
+/*
+/* Copy a complex pair */
+var p1 = (1,2);
+var p2 = (3,4);
+var p3 = p1;
+var p4 = p2;
+var x = ((p1, p4), (p2, p3));
+var y = x;
+*/
+
+/*
+/* Everything combined */
+var p1 = (1,2);
+var p2 = (3,4);
+var p3 = (5,6);
+var x = p2 : p3 : [];
+var z = p1 : x;
+var y = (x, z);
+*/
+
+/*
+main() {
+    print(y);
+}
+*/
+
+///*
+var lst = 2 : 3 : 4 : 5 : [];
+var pr = ((1,2),((3),4));
+
+main() {
+    lst = 1 : lst;
+    pr = ((2,1), pr.snd);
+    print(lst);
+    print(pr);
+    print((1,2));
+}
+//*/

@@ -1,0 +1,17 @@
+gcd (m, n) {
+  var x = 0;
+  if (n < m) {
+    return gcd(n, m);
+  } else {
+    if (n == m){
+      return n + x;
+    } else {
+      // n > m
+      return gcd(m, n - m);
+    }
+  }
+}
+
+main() {
+  print(gcd(12, 18));
+}

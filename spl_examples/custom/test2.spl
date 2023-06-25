@@ -1,0 +1,41 @@
+var x = 1 : 2 : 3 : 4 : 5 : [];
+var y = (2, 3);
+var head = getHead(x);
+var tail = getTail(x);
+var first = getFirst(y);
+var second = getSecond(y);
+var res = id(1);
+var list = makeList(x);
+// var z = main(); // Not allowed
+
+main() {
+	print(res);
+}
+
+getHead(a) {
+	return a.hd;
+}
+
+getTail(a) {
+	return a.tl;
+}
+
+getFirst(a) {
+	return a.fst;
+}
+
+getSecond(a) :: (a, b) -> b {
+	return a.snd;
+}
+
+id(a) :: a -> a {
+	return a;
+}
+
+plus5(a) {
+	return a + 5;
+}
+
+makeList(a) {
+	return a : [];
+}

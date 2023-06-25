@@ -1,0 +1,21 @@
+var a = (1,2);
+var b = (3,4);
+var c = (5,6);
+var d = (7,8);
+var x = (a,b);
+var y = (c,d);
+var z = (x,y);
+
+var list1 = 1 : 2 : 3 : 4 : 5 : [];
+var list2 = 6 : 7 : 8 : 9 : 10 : [];
+var lists = list1 : list2 : [];
+var listPair = (lists, (list1, list2));
+
+main() {
+    print(a);
+    print(b);
+    print(x);
+    print(z);
+    print(listPair);
+    print(listPair.fst);
+}

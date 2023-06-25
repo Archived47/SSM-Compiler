@@ -1,0 +1,39 @@
+[Int] list = 1 : 2 : 3 : 4 : [];
+var x = 16 : list;
+var pair = (True,6);
+var pairlist = pair : pair : [];
+/*
+Comment section
+*/
+
+main() {
+    a b = 45;
+
+    if(False) {
+        print(1);               //overloading print
+    } else {
+        print(pairlist.hd);     //overloading print
+    }
+
+    func(20);
+}
+
+//func with arguments
+func(h) :: Int -> Void {
+    print('s' : 't' : 'r' : 'i' : 'n' : 'g' : []); //overloading print
+
+    if(isEmpty(x)){             //isEmpty
+        print(False);           //overloading print
+    }
+
+    while(h > 3){
+        h = h - 1;
+        print(h);
+    }
+
+    print(x.hd);
+    print(x.tl);
+
+    return;
+}
+

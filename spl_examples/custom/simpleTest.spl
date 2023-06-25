@@ -1,0 +1,5 @@
+var z = 1;
+
+second (a) :: (a, b) -> b {
+    return a.fst;
+}

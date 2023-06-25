@@ -1,0 +1,20 @@
+int x = 5;
+char y = 'a';
+[int] z = 1 : 2 : 3 : [];
+
+do_print(b) {
+    print('P' : 'r' : 'i' : 'n' : 't' : ' ' : 'b' : ':' : []);
+    do_print2(b);
+    //print(b);
+}
+
+do_print2(b) {
+    print(b);
+}
+
+main() {
+    do_print(x);
+    do_print(y);
+    do_print(x);
+    do_print(z);
+}

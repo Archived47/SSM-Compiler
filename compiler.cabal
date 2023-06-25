@@ -1,0 +1,102 @@
+cabal-version:      2.4
+name:               compiler
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             Lucas van der Laan
+maintainer:         l.vanderlaan@student.science.ru.nl
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+library
+    exposed-modules:  
+        Compiler.Main
+        Compiler.Scanner
+        Compiler.Parser
+        Compiler.Unification
+        Compiler.SSM
+        Compiler.Graph
+        Compiler.AST
+        Compiler.TypedAST
+        Compiler.Position
+        Compiler.Token
+
+        LSP.Handlers
+        LSP.Server
+        LSP.State
+        LSP.Util
+
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    
+        base, 
+        containers >= 0.6.5 && < 0.7,
+        directory    >= 1.3.6 && < 1.4,
+        mtl          >= 2.2.2 && < 2.3,
+        transformers >= 0.5.6 && < 0.6,
+        optparse-applicative >= 0.18.1 && < 0.19,
+        aeson,
+        data-default,
+        lsp < 2.0,
+        lsp-types < 2.0,
+        text,
+        hslogger,
+        lens,
+        filepath,
+        unordered-containers,
+        text-rope,
+        network-uri,
+        uri-encode,
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable compiler
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base,
+        compiler
+
+    hs-source-dirs:   compiler
+    default-language: Haskell2010
+
+executable lsp
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base,
+        optparse-applicative >= 0.18.1 && < 0.19,
+        compiler
+
+    hs-source-dirs:   lsp
+    default-language: Haskell2010
+

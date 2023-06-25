@@ -1,0 +1,20 @@
+//var x = 1 : [];
+var y = 3 : 4 : getEmptyList(5);
+
+getEmptyList(x) :: Int -> [Int] {
+    return ([]);
+}
+
+/*
+var y = (3 : 4 : []) : getEmptyList(5);
+
+getEmptyList(x) :: {
+    return ((x : x : []) : (x : x : []) : []);
+}
+*/
+
+main() {
+    //print(x);
+    print(y);
+    return;
+}

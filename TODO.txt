@@ -1,0 +1,23 @@
+Something I wanna try in a future compiler project:
+    Partial compilation with caching for the LSP server.
+    The idea would be quite simple:
+        1. Compile the file and save all steps to a cache.
+            * This would be done on file save.
+            * Every AST node would basically implement the Observer pattern, where a node that was changed can notify others that it was changed.
+            * We also save the file contents to the cache.
+        2. When a file is opened, we load the cache and check if the file was changed.
+            * If it wasn't, we load the cache and use it.
+            * If it was:
+                * Check where the differences are.
+                * Parse the place(s) where the tokens were changed.
+                * Parse the dependencies of the changed nodes.
+
+Parser:
+    At the start of every parsing empty the current tokens
+    When something gets succesfully parsed, add it's tokens to the current
+    When it fails, add those tokens to the error
+
+LSP/Scanner:
+    Change the scanner so that it saves tabs and spaces seperately.
+    The LSP can then ask the tab size from the client for a more accurate position. 
+        

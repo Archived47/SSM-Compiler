@@ -1,0 +1,58 @@
+a x = 1: 2 : 3 : 4 : 5 : []; // List Int
+Int y = 5 + 6 * 9 + 4;           // Int
+var z = x.tl.tl.hd;              // Int
+var v = !!!!!(True);
+var a = (x : [], y : []);        // Pair (List (List Int), List Int)
+var c = func(1, True);
+
+// Bool dsad = ---(True); // This should fail
+
+//TODO: even number of minussus should not result in "--" in terminal
+var l = -------5;
+
+
+//TODO fix error WrongNumberOfArguments when no types inserted
+//TODO: fix having no error when no arguments in func and funcall with arguments
+//TODO: fix that this is acceptable: "main() :: Int -> Void"
+
+main(p) :: Int -> Void { 
+	var m = p + 3;
+	return;
+}
+
+// Collect all global variables before we enter the functions
+// Replace global variables with function/local variables
+func(h, k) {
+ var a = 1;
+	var b = True;
+	var c = b;
+	var d = c;
+
+	while(h != 0){
+		h = h - 1;
+	}
+
+	if (k == True) {
+		k = False;
+	} else {
+		k = True;
+	}
+
+	// k = False;
+	main(a);
+
+	return 5;
+}
+
+var b = ((z,[]), y); // Pair (Pair (Int, List T), Int)
+
+eq(a, b) :: a a -> Bool {
+	if (a == b) {
+		return True;
+	} else {
+		return False;
+	}
+}
+
+// TODO MAKE SURE RETURN IS LAST STATEMENT IN FUNCTION
+// TODO Don't let the function call itself in its varDeclarations
